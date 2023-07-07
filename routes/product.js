@@ -32,7 +32,7 @@ router.post("/save",async(req,res)=>{
             });
         };
         product.save().then(result=>{
-            res.end(JSON.stringify({status:"sucess", data:result}));
+            res.end(JSON.stringify({status:"success", data:result}));
         }, err=>{
             res.end(JSON.stringify({status:"failed", data:result}));
         });
@@ -48,7 +48,7 @@ router.post("/list", async(req, res)=>{
         let pcid = body.data.pcid;
         if(pcid == ""){
             let products = await Product.find();
-            res.end(JSON.stringify({status:"sucess", data:products}));    
+            res.end(JSON.stringify({status:"success", data:products}));    
         }
         else{
             let products = await Product.find({pcid : pcid});

@@ -25,7 +25,7 @@ router.post("/save", async(req,res)=>{
             });
         }
         productcategory.save().then(result=>{
-            res.end(JSON.stringify({status:"sucess", data:result}));
+            res.end(JSON.stringify({status:"success", data:result}));
         }, err=>{
             res.end(JSON.stringify({status:"failed", data:result}));
         });
